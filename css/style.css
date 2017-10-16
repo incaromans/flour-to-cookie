@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+	font-family: 'lato',sans-serif;
+	line-height: 1.4;
+	margin: 5px;	
+}
+
+h1, h2, h3 {
+	text-transform: uppercase;
+	font-weight: 300;
+	color: black;
+
+}
+
+
+header {
+	text-align: center;
+	color: white;
+	background-color: green;
+	background-image: url(../images/header-bg.jpg);
+	background-size: cover; 
+	background-position: center;
+	padding: 30px;
+	margin-bottom: 30px;
+
+}
+
+header a {
+	color: white;
+	text-decoration: none;
+}
+a:hover {
+	background-color: green;
+}
+
+
+header li {
+	display: inline; /*li is the make the items line up in one line instead of in bullet points, eg. Home About Us */
+	margin: 5px;
+}
+
+footer {
+	background-color: grey;
+	color: white;
+	margin: 10px;
+	text-align: center;
+	clear: both; /*use this when the floater function causes footer to go up*/
+	 /*float right brings everything to the right, then use clear right to make it stack below each other*/ 
+}
+
+footer a {
+	margin: 10px;
+}
+
+.container {
+	width: 1000px;
+	border: 1px solid red;
+	margin: 0 auto ;
+	margin-bottom: 30px;
+	/*top and bottom is 0*/
+	/* left and right is auto */ 
+}
+
+.sidebar {
+	width: 40%; /*40% of 1000px = 400px*/
+	float: right;
+	background-color: lightyellow;
+	background-image: url(../images/sidebar-bg.png);
+	padding: 30px;
+}
+.recipes {
+	width: 60%; /*60% of 1000px = 600px*/
+	float: left;
+}
+
+article {
+	width: 50%;
+	float: left;
+	padding-right: 20px;
+}
+
+article img {
+	width: 100%;
+}
+
+@media (max-width: 1000px) {
+	.sidebar {
+		display: none; 
+	}
+/*1000px is tablet size, 600pc is mobile size*/
+
+	.recipes, .container {width: 100%; }
+
+}
+	
+@media (max-width: 600px) {
+	article {
+		display: block;
+		width: 100%;
+	}
+}
+
+
+
